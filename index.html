@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <textarea name="" id="in" cols="30" rows="10"></textarea>
+        <button onclick="doIt()">Go</button>
+        <div id="text"></div>
+    </div>
+
+    <script>
+        function doIt() {
+            var input = document.getElementById("in");
+            document.getElementById('text').innerHTML = input.value;
+            var arrayOfLines = input.value.split("\n");
+            
+            var code = "";
+
+            for(var i = 0; i < arrayOfLines.length; i++) {
+                code += arrayOfLines[i] + "\n";
+            }
+
+            console.log(code);
+            document.getElementById('text').innerHTML = code;
+        }
+
+    
+        
+        
+    </script>
+</body>
+</html>
